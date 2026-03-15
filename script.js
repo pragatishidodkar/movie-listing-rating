@@ -1,10 +1,10 @@
-function renderMovies(list, containerId){
+const container=document.getElementById("movieContainer")
 
-const container = document.getElementById(containerId)
+function displayMovies(list){
 
 container.innerHTML=""
 
-list.forEach(movie=>{
+list.forEach((movie,index)=>{
 
 const card=document.createElement("div")
 
@@ -24,7 +24,11 @@ card.innerHTML=`
 
 <p>${movie.genre} • ${movie.year}</p>
 
-<span class="rating">⭐ ${movie.rating}</span>
+<div class="stars">
+
+${createStars(index,movie.rating)}
+
+</div>
 
 </div>
 
@@ -36,38 +40,62 @@ container.appendChild(card)
 
 }
 
-renderMovies(movieDatabase.trending,"trending")
-renderMovies(movieDatabase.topRated,"topRated")
-renderMovies(movieDatabase.newReleases,"newReleases")
+function createStars(index,rating){
 
+let stars=""
 
-function filterGenre(genre){
+for(let i=1;i<=5;i++){
 
-if(genre==="all"){
+if(i<=rating){
 
-renderMovies(movieDatabase.trending,"trending")
+stars+=`<span onclick="rateMovie(${index},${i})">★</span>`
 
-return
+}else{
+
+stars+=`<span onclick="rateMovie(${index},${i})">☆</span>`
+
+}
 
 }
 
-const filtered = movieDatabase.trending.filter(movie =>
-movie.genre.includes(genre)
-)
-
-renderMovies(filtered,"trending")
+return stars
 
 }
+
+function rateMovie(index,value){
+
+movies[index].rating=value
+
+displayMovies(movies)
+
+}
+
+displayMovies(movies)
 
 
 document.getElementById("search").addEventListener("input",(e)=>{
 
 const term=e.target.value.toLowerCase()
 
-const results = movieDatabase.trending.filter(movie =>
-movie.title.toLowerCase().includes(term)
-)
+const filtered=movies.filter(m=>m.title.toLowerCase().includes(term))
 
-renderMovies(results,"trending")
+displayMovies(filtered)
 
 })
+
+
+function filterGenre(genre){
+
+if(genre==="all"){
+
+displayMovies(movies)
+
+return
+
+}
+
+const filtered=movies.filter(m=>m.genre.includes(genre))
+
+displayMovies(filtered)
+
+}
