@@ -1,27 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ReelRatings - Movie Reviews</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
 <body>
 
 <header class="navbar">
+
 <h1 class="logo">ReelRatings</h1>
 
 <input type="text" id="search" placeholder="Search movies...">
+
 </header>
 
+
 <section class="hero">
+
 <h2>Discover Movies & Share Your Ratings</h2>
-<p>Browse popular films and rate your favorites.</p>
+
+<p>Browse movies and rate your favourites.</p>
+
 </section>
 
+
 <section class="movies-section">
-<h2>Trending Movies</h2>
+
+<h2>Popular Movies</h2>
 
 <div class="movie-container" id="movieContainer"></div>
 
 </section>
 
+
+<div class="modal" id="movieModal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalDesc"></p>
+
+<iframe id="modalTrailer" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+</div>
+
+
 <footer>
-<p>© 2026 ReelRatings | Movie Review Website</p>
+
+<p>© 2026 ReelRatings</p>
+
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
+</html>
