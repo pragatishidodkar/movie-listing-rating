@@ -33,3 +33,17 @@ container.appendChild(card);
 renderMovies(movieDatabase.trending, "trending");
 renderMovies(movieDatabase.topRated, "topRated");
 renderMovies(movieDatabase.newReleases, "newReleases");
+function filterGenre(genre){
+
+if(genre === "all"){
+renderMovies(movieDatabase.trending,"trending")
+return
+}
+
+const filtered = movieDatabase.trending.filter(movie =>
+movie.genre.includes(genre)
+)
+
+renderMovies(filtered,"trending")
+
+}
