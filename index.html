@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cine Insight - Movie Reviews</title>
+<title>Cine Insight</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -15,70 +16,48 @@
 
 <header class="navbar">
 
-<h1 class="logo">CineInsight</h1>
+<h1 class="logo">Cine Insight</h1>
 
 <input type="text" id="search" placeholder="Search movies...">
 
 </header>
 
 
-<section class="hero">
-
-<h2>Discover Movies & Share Your Ratings</h2>
-
-<p>Browse movies and rate your favourites.</p>
-
-</section>
-
-
-<section class="movies-section">
-
-<h2>Popular Movies</h2>
-
-<div class="movie-container" id="movieContainer"></div>
-
-</section>
-<section class="movies-section">
-<h2>Trending Movies</h2>
-<div class="movie-container" id="trending"></div>
-</section>
-
-<section class="movies-section">
-<h2>Top Rated</h2>
-<div class="movie-container" id="topRated"></div>
-</section>
-
-<section class="movies-section">
-<h2>New Releases</h2>
-<div class="movie-container" id="newReleases"></div>
-</section>
-
-<script src="movies-data.js"></script>
-<script src="script.js"></script>
 <div class="filters">
 
 <button onclick="filterGenre('all')">All</button>
 <button onclick="filterGenre('Action')">Action</button>
 <button onclick="filterGenre('Drama')">Drama</button>
 <button onclick="filterGenre('Sci-Fi')">Sci-Fi</button>
-<button onclick="filterGenre('Comedy')">Comedy</button>
-
-</div>
-<div class="modal" id="movieModal">
-
-<div class="modal-content">
-
-<span class="close">&times;</span>
-
-<h2 id="modalTitle"></h2>
-
-<p id="modalDesc"></p>
-
-<iframe id="modalTrailer" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
 
 </div>
 
-</div>
+
+<section>
+
+<h2>Trending Movies</h2>
+
+<div class="movie-container" id="trending"></div>
+
+</section>
+
+
+<section>
+
+<h2>Top Rated</h2>
+
+<div class="movie-container" id="topRated"></div>
+
+</section>
+
+
+<section>
+
+<h2>New Releases</h2>
+
+<div class="movie-container" id="newReleases"></div>
+
+</section>
 
 
 <footer>
@@ -87,6 +66,8 @@
 
 </footer>
 
+
+<script src="movies-data.js"></script>
 <script src="script.js"></script>
 
 </body>
