@@ -21,9 +21,25 @@ card.innerHTML = `
 
 <span class="rating-badge">${movie.rating}</span>
 
-</div>
+</div> 
 `;
+card.innerHTML = `
+<a href="movie.html?title=${encodeURIComponent(movie.title)}">
 
+<img src="${movie.poster}">
+
+</a>
+
+<div class="movie-info">
+
+<h3>${movie.title}</h3>
+
+<p>${movie.genre} • ${movie.year}</p>
+
+<span class="rating-badge">${movie.rating}</span>
+
+</div>
+`
 container.appendChild(card);
 
 });
