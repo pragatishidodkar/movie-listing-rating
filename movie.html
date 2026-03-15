@@ -1,18 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Cine Insight</title>
+
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+<h1 style="text-align:center">Movie Detail</h1>
+
 <div id="movieDetail"></div>
 
 <script src="movies-data.js"></script>
-<script src="movie-detail.js"></script>
+
+<script>
+
+const params=new URLSearchParams(window.location.search)
+
+const title=params.get("title")
+
+const allMovies=[...movieDatabase.trending,...movieDatabase.topRated,...movieDatabase.newReleases]
+
+const movie=allMovies.find(m=>m.title===title)
+
+const container=document.getElementById("movieDetail")
+
+container.innerHTML=`
+
+<div style="text-align:center">
+
+<h2>${movie.title}</h2>
+
+<img src="${movie.poster}" width="300">
+
+<p>${movie.genre}</p>
+
+<p>Rating: ⭐ ${movie.rating}</p>
+
+<p>Year: ${movie.year}</p>
+
+</div>
+
+`
+
+</script>
 
 </body>
+
 </html>
