@@ -11,8 +11,6 @@
 
 <body>
 
-<h1 style="text-align:center">Movie Detail</h1>
-
 <div id="movieDetail"></div>
 
 <script src="movies-data.js"></script>
@@ -23,9 +21,7 @@ const params=new URLSearchParams(window.location.search)
 
 const title=params.get("title")
 
-const allMovies=[...movieDatabase.trending,...movieDatabase.topRated,...movieDatabase.newReleases]
-
-const movie=allMovies.find(m=>m.title===title)
+const movie=movies.find(m=>m.title===title)
 
 const container=document.getElementById("movieDetail")
 
@@ -33,15 +29,17 @@ container.innerHTML=`
 
 <div style="text-align:center">
 
-<h2>${movie.title}</h2>
+<h1>${movie.title}</h1>
 
 <img src="${movie.poster}" width="300">
 
 <p>${movie.genre}</p>
 
-<p>Rating: ⭐ ${movie.rating}</p>
-
 <p>Year: ${movie.year}</p>
+
+<p>${movie.description}</p>
+
+<iframe width="560" height="315" src="${movie.trailer}" frameborder="0" allowfullscreen></iframe>
 
 </div>
 
