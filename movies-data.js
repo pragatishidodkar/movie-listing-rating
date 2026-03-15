@@ -1,71 +1,43 @@
-const movieDatabase = {
-
-trending: [
+const movies = [
 
 {
 title:"The Dark Knight",
-year:2008,
 genre:"Action",
-rating:9.0,
-poster:"https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+year:2008,
+rating:4,
+poster:"https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+description:"Batman faces the Joker.",
+trailer:"https://www.youtube.com/embed/EXeTwQWrcwY"
 },
 
 {
 title:"Inception",
-year:2010,
 genre:"Sci-Fi",
-rating:8.8,
-poster:"https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg"
+year:2010,
+rating:4,
+poster:"https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
+description:"A thief enters dreams.",
+trailer:"https://www.youtube.com/embed/YoHD9XEInc0"
 },
 
 {
 title:"Interstellar",
+genre:"Sci-Fi",
 year:2014,
-genre:"Sci-Fi",
-rating:8.6,
-poster:"https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg"
-}
-
-],
-
-topRated: [
-
-{
-title:"The Shawshank Redemption",
-year:1994,
-genre:"Drama",
-rating:9.3,
-poster:"https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+rating:5,
+poster:"https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
+description:"Explorers travel through space.",
+trailer:"https://www.youtube.com/embed/zSWdZVtXT7E"
 },
 
 {
-title:"The Godfather",
-year:1972,
-genre:"Crime",
-rating:9.2,
-poster:"https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
-}
-
-],
-
-newReleases: [
-
-{
-title:"Dune Part Two",
-year:2024,
-genre:"Sci-Fi",
-rating:8.7,
-poster:"https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
-},
-
-{
-title:"Oppenheimer",
-year:2023,
+title:"Joker",
 genre:"Drama",
-rating:8.5,
-poster:"https://image.tmdb.org/t/p/w500/8GxvVqJ7S3KqkZ0kz1jF5rQ1JzO.jpg"
+year:2019,
+rating:4,
+poster:"https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+description:"Origin of Joker.",
+trailer:"https://www.youtube.com/embed/zAGVQLHvwOY"
 }
 
-]
-
-}
+];
